@@ -18,7 +18,7 @@ const Section1 = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-500">
-            Welcome to <span className="text-[#febf00] dark:text-[#599a26]">ToyKids</span>
+            Welcome to <span className="text-[#febf00] dark:text-[#599a26]">Imex Port</span>
           </h1>
           <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-lg transition-colors duration-500">
             Discover the best toys for your kids. Safe, fun, and educational toys delivered right to your doorstep!
@@ -26,7 +26,7 @@ const Section1 = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#599a26] dark:bg-[#febf00] text-white dark:text-gray-900 px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all duration-300"
+            className="bg-primary dark:bg-[#febf00] text-white dark:text-gray-900 px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all duration-300"
           >
             Shop Now
           </motion.button>
