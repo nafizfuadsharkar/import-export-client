@@ -100,9 +100,9 @@ const Navbar = () => {
                 src={user.photoURL || userImg}
                 alt="User"
               />
-              <span className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-70 text-white text-sm px-2 py-1 rounded opacity-0 hover:opacity-100 transition-opacity duration-300 text-center whitespace-nowrap ">
+              {/* <span className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-70 text-white text-sm px-2 py-1 rounded opacity-0 hover:opacity-100 transition-opacity duration-300 text-center whitespace-nowrap ">
                 {user.displayName}
-              </span>
+              </span> */}
             </div>
 
             <button
