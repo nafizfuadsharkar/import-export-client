@@ -65,18 +65,19 @@ const ProductDetails = ({ product }) => {
     if (!quantity) return; // user cancelled
 
     try {
-      // 1️⃣ Add to imported collection
+      // 1️ Add to imported collection
       await fetch("http://localhost:3000/imported", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...product,
+          productId: product._id,
           imported_quantity: quantity,
           imported_by: user.email,
         }),
       });
 
-      // 2️⃣ Increase imported_quantity in products collection
+      // 2️ Increase imported_quantity in products collection
       await fetch(
         `http://localhost:3000/products/${product._id}/increment-imported`,
         {
@@ -86,17 +87,17 @@ const ProductDetails = ({ product }) => {
         }
       );
 
-      // 2️⃣ Decrease available_quantity using $inc
+      // 2️ Decrease available_quantity using $inc
       await fetch(`http://localhost:3000/products/${product._id}/decrement`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ decrement: quantity }),
       });
 
-      // 3️⃣ Update UI instantly
+      // 3️ Update UI instantly
       setAvailableQty((prev) => prev - quantity);
 
-      // 4️⃣ Feedback & navigate to /my-imported
+      // 4️ Feedback & navigate to /my-imported
       Swal.fire({
         title: "Imported!",
         text: `You imported ${quantity} kg of ${product_name}.`,

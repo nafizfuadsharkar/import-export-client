@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 
 const ImportedCard = ({ product, onRemove }) => {
-
+  console.log(product);
   // ✅ Handle remove product
   const handleRemove = () => {
     Swal.fire({
@@ -38,7 +38,6 @@ const ImportedCard = ({ product, onRemove }) => {
       }
     });
   };
-
 
   return (
     <div className="group bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700">
@@ -86,7 +85,7 @@ const ImportedCard = ({ product, onRemove }) => {
           </button>
 
           <Link
-            to={`/product-details/${product._id}`}
+            to={`/product-details/${product.productId}`}
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-sm"
           >
             See Details
