@@ -85,7 +85,6 @@ const ProductDetails = ({ product }) => {
           body: JSON.stringify({ increment: 1 }),
         }
       );
-      
 
       // 2️⃣ Decrease available_quantity using $inc
       await fetch(`http://localhost:3000/products/${product._id}/decrement`, {

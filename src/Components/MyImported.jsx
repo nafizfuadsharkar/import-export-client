@@ -26,8 +26,8 @@ const MyImported = () => {
   if (loading) return <p className="text-center mt-10">Loading...</p>;
 
   return (
-    <div>
-      <h2 className="text-5xl font-bold text-center py-5">
+    <div className="my-2">
+      <h2 className="text-5xl font-bold text-center py-5 ">
         <span className="text-accent">My</span>{" "}
         <span className="text-primary">Imported</span>{" "}
         <span className="text-accent">Products</span>
@@ -41,12 +41,6 @@ const MyImported = () => {
             onRemove={handleRemove} // ✅ Pass function to child
           />
         ))}
-      </div>
-
-      <div className="flex justify-center">
-        <Link to="/export-product" className="btn btn-primary my-10">
-          Add Products
-        </Link>
       </div>
     </div>
   );

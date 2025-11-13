@@ -1,10 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 
 const ImportedCard = ({ product, onRemove }) => {
-  const navigate = useNavigate();
 
   // ✅ Handle remove product
   const handleRemove = () => {
@@ -40,10 +39,6 @@ const ImportedCard = ({ product, onRemove }) => {
     });
   };
 
-  // ✅ Navigate to product details
-  const handleDetails = () => {
-    navigate(`/product/${product._id}`);
-  };
 
   return (
     <div className="group bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700">
@@ -90,12 +85,12 @@ const ImportedCard = ({ product, onRemove }) => {
             Remove
           </button>
 
-          <button
-            onClick={handleDetails}
+          <Link
+            to={`/product-details/${product._id}`}
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-sm"
           >
             See Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
