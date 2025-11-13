@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import DynamicTitle from "../Components/DynamicTitle";
 import { useLoaderData } from "react-router";
 import RecentProducts from "../Components/RecentProducts";
+import HeroSection from "../Components/HeroSection";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ const Home = () => {
     <div className="w-full max-w-[1200px] mx-auto px-4 overflow-x-hidden">
       <DynamicTitle title="Home"></DynamicTitle>
       <div data-aos="fade-down">
+        <HeroSection></HeroSection>
         <Slider />
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
