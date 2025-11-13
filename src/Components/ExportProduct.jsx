@@ -1,9 +1,12 @@
 import React, { use } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
 const ExportProduct = () => {
   const { user } = use(AuthContext);
+  console.log(user);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ const ExportProduct = () => {
       product_image: e.target.product_image.value,
       status: e.target.status.value,
       location: user.location,
-      seller_name: user.seller_name,
+      seller_name: user.displayName,
       condition: e.target.condition.value,
       usage: e.target.usage.value,
       description: e.target.description.value,
@@ -42,6 +45,7 @@ const ExportProduct = () => {
       .then((data) => {
         toast.success("Product Exported successfully!");
         e.target.reset();
+        navigate("/my-export");
       })
       .catch((err) => {
         toast.error("Failed to add product!");

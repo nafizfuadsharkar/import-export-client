@@ -39,7 +39,6 @@ const Home = () => {
       <DynamicTitle title="Home"></DynamicTitle>
       <div data-aos="fade-down">
         <HeroSection></HeroSection>
-        <Slider />
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
         <RecentProducts data={data} />
