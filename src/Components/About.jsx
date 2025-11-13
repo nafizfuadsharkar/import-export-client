@@ -10,10 +10,10 @@ const About = () => {
         {/* Text Content */}
         <div className="flex-1 text-center lg:text-left space-y-6">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 dark:text-gray-100 tracking-tight">
-            About ToyKids
+            About Imex Port
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg sm:text-xl leading-relaxed">
-            At <span className="font-semibold text-primary dark:text-indigo-400">ToyKids</span>, we believe every child deserves a world full of fun and learning. 
+            At <span className="font-semibold text-primary dark:text-indigo-400">Imex Port</span>, we believe every child deserves a world full of fun and learning. 
             Our toys are carefully selected to spark creativity, enhance imagination, and bring joy to children of all ages. 
             From educational puzzles to creative building blocks, we provide a safe and exciting environment for kids to explore and learn through play.
           </p>
@@ -27,7 +27,7 @@ const About = () => {
           <div className="relative group">
             <img
               src={aboutImage}
-              alt="About ToyKids"
+              alt="About Imex Port"
               className="w-full max-w-md rounded-2xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
             />
             {/* Gradient Overlay for Style */}
