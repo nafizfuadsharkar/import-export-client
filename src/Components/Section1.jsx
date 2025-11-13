@@ -4,7 +4,7 @@ import toyImage from "../assets/img11.jpg";
 
 const Section1 = () => {
   return (
-    <section className="relative py-20 bg-[#ffe6b0] dark:bg-gray-900 overflow-hidden transition-colors duration-500 my-4">
+    <section className="relative py-20 bg-[#ffe6b0] dark:bg-gray-900 overflow-hidden transition-colors duration-500 my-4 rounded-2xl">
       {/* Decorative floating blobs */}
       <div className="absolute -top-32 -left-32 w-[300px] h-[300px] bg-[#febf00]/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute -bottom-32 -right-32 w-[350px] h-[350px] bg-[#ff513a]/20 rounded-full blur-3xl animate-pulse delay-300"></div>
