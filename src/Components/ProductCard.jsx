@@ -66,7 +66,7 @@ const ProductCard = ({ product }) => {
 
         {/* See Details Button */}
         <Link to={`/product-details/${_id}`}>
-          <button className="mt-3 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2.5 rounded-xl font-semibold transition-colors duration-300 shadow-sm">
+          <button className="mt-3 w-full bg-primary hover:bg-amber-400 text-white py-2.5 rounded-xl font-semibold transition-colors duration-300 shadow-sm">
             See Details
           </button>
         </Link>
