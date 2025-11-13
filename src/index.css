@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #febf00;
+  --color-secondary: #599a26;
+  --color-light: #ffe6b0;
+  --color-accent: #ff513a;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
