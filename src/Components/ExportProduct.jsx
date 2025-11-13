@@ -34,7 +34,7 @@ const ExportProduct = () => {
       created_by: user?.email || "anonymous",
     };
 
-    fetch("http://localhost:3000/products", {
+    fetch("https://imex-port.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

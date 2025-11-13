@@ -66,7 +66,7 @@ const ProductDetails = ({ product }) => {
 
     try {
       // 1️ Add to imported collection
-      await fetch("http://localhost:3000/imported", {
+      await fetch("https://imex-port.vercel.app/imported", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -79,7 +79,7 @@ const ProductDetails = ({ product }) => {
 
       // 2️ Increase imported_quantity in products collection
       await fetch(
-        `http://localhost:3000/products/${product._id}/increment-imported`,
+        `https://imex-port.vercel.app/products/${product._id}/increment-imported`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -88,11 +88,14 @@ const ProductDetails = ({ product }) => {
       );
 
       // 2️ Decrease available_quantity using $inc
-      await fetch(`http://localhost:3000/products/${product._id}/decrement`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ decrement: quantity }),
-      });
+      await fetch(
+        `https://imex-port.vercel.app/products/${product._id}/decrement`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ decrement: quantity }),
+        }
+      );
 
       // 3️ Update UI instantly
       setAvailableQty((prev) => prev - quantity);

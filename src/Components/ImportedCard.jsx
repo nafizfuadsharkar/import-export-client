@@ -17,7 +17,7 @@ const ImportedCard = ({ product, onRemove }) => {
       confirmButtonText: "Yes, remove it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/imported/${product._id}`, {
+        fetch(`https://imex-port.vercel.app/imported/${product._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

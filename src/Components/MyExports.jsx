@@ -11,7 +11,7 @@ const MyExports = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/my-exports?email=${user.email}`)
+    fetch(`https://imex-port.vercel.app/my-exports?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

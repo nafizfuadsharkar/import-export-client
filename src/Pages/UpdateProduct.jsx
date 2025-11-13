@@ -18,7 +18,7 @@ const UpdateProduct = () => {
       product_image: e.target.product_image.value,
     };
 
-    fetch(`http://localhost:3000/product/${product._id}`, {
+    fetch(`https://imex-port.vercel.app/product/${product._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

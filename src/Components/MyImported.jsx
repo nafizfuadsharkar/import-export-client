@@ -10,7 +10,7 @@ const MyImported = () => {
 
   // ✅ Fetch imported products
   useEffect(() => {
-    fetch(`http://localhost:3000/my-imported?email=${user.email}`)
+    fetch(`https://imex-port.vercel.app/my-imported?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

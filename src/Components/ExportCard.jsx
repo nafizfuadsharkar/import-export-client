@@ -18,7 +18,7 @@ const ExportCard = ({ product, onUpdate }) => {
       product_image: e.target.product_image.value,
     };
 
-    fetch(`http://localhost:3000/product/${product._id}`, {
+    fetch(`https://imex-port.vercel.app/product/${product._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -54,7 +54,7 @@ const ExportCard = ({ product, onUpdate }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/product/${product._id}`, {
+        fetch(`https://imex-port.vercel.app/product/${product._id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const ExportCard = ({ product, onUpdate }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            navigate('/my-exports')
+            navigate("/my-exports");
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",

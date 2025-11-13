@@ -4,7 +4,6 @@ import ProductCard from "./ProductCard";
 import Loading from "../Pages/Loading";
 import NoProduct from "./NoProduct";
 
-
 const AllProducts = () => {
   const data = useLoaderData();
   const [products, setProducts] = useState([]);
@@ -29,7 +28,7 @@ const AllProducts = () => {
     setLoading(true);
     setSearched(true); // 👈 mark that user searched
 
-    fetch(`http://localhost:3000/search?search=${search_text}`)
+    fetch(`https://imex-port.vercel.app/search?search=${search_text}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
