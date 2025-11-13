@@ -5,7 +5,7 @@ import heroImg from "../assets/img15.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#fff9ec] via-[#fff4d6] to-[#ffe6b0] dark:from-gray-900 dark:via-gray-800 dark:to-gray-800 text-gray-900 dark:text-gray-100">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#fff9ec] via-[#fff4d6] to-[#ffe6b0] dark:from-gray-900 dark:via-gray-800 dark:to-gray-800 text-gray-900 dark:text-gray-100 rounded-2xl">
       {/* Animated gradient blobs */}
       <div className="absolute -top-40 -right-40 w-[400px] h-[400px] bg-[#febf00]/30 dark:bg-[#febf00]/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-[-120px] left-[-120px] w-[450px] h-[450px] bg-[#ff513a]/20 dark:bg-[#ff513a]/10 rounded-full blur-3xl animate-pulse delay-300"></div>
