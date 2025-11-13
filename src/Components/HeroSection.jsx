@@ -1,84 +1,89 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Search } from "lucide-react";
-import heroImg from "../assets/img15.jpg"; // replace with your image path
+import { ArrowRightCircle } from "lucide-react";
+import heroImg from "../assets/img15.jpg"; // replace with your image
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Decorative Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[-150px] right-[-100px] w-[400px] h-[400px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-[-150px] left-[-100px] w-[400px] h-[400px] bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-300"></div>
-      </div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#fff9ec] via-[#fff4d6] to-[#ffe6b0] text-gray-900">
+      {/* Animated gradient blobs */}
+      <div className="absolute -top-40 -right-40 w-[400px] h-[400px] bg-[#febf00]/30 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-[-120px] left-[-120px] w-[450px] h-[450px] bg-[#ff513a]/20 rounded-full blur-3xl animate-pulse delay-300"></div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 flex flex-col-reverse lg:flex-row items-center gap-16">
-        {/* Left Side */}
+      {/* Content Container */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-24 flex flex-col-reverse lg:flex-row items-center gap-16">
+        {/* Left Content */}
         <motion.div
-          className="flex-1 text-center lg:text-left space-y-6"
+          className="flex-1 text-center lg:text-left space-y-6 z-10"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-snug">
-            Streamline Your{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              Import & Export
-            </span>{" "}
-            Operations
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Manage Your{" "}
+            <span className="text-[#febf00] drop-shadow-sm">Imports</span> &{" "}
+            <span className="text-[#ff513a] drop-shadow-sm">Exports</span>{" "}
+            with Ease
           </h1>
 
-          <p className="text-gray-600 text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
-            Simplify product management, automate tracking, and accelerate
-            trade decisions — all through one intelligent global platform.
+          <p className="text-gray-700 text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
+            A modern platform for global trade — track shipments, handle products, and
+            monitor insights in real-time. Simplify logistics and scale smarter.
           </p>
 
-          {/* Search Bar */}
-          <motion.div
-            className="relative mt-6 max-w-lg mx-auto lg:mx-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            <input
-              type="text"
-              placeholder="Search products, suppliers or categories..."
-              className="w-full pl-12 pr-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none shadow-md transition-all"
-            />
-            <Search className="absolute left-4 top-3.5 text-gray-400 w-5 h-5" />
-          </motion.div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-[#ff513a] hover:bg-[#e04631] text-white px-8 py-3 rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all"
+            >
+              Get Started <ArrowRightCircle className="w-5 h-5" />
+            </motion.button>
 
-          <motion.div
-            className="flex justify-center lg:justify-start gap-4 pt-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-7 py-3 rounded-full font-semibold flex items-center gap-2 hover:scale-105 hover:shadow-lg transition-all">
-              Get Started <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-gray-300 px-7 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all">
-              Learn More
-            </button>
-          </motion.div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="border-2 border-[#599a26] text-[#599a26] px-8 py-3 rounded-full font-semibold hover:bg-[#599a26] hover:text-white transition-all"
+            >
+              Explore Dashboard
+            </motion.button>
+          </div>
         </motion.div>
 
         {/* Right Side Image */}
         <motion.div
           className="flex-1 flex justify-center relative"
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="absolute -z-10 w-[450px] h-[450px] bg-gradient-to-tr from-blue-200 to-purple-200 rounded-full blur-3xl opacity-40"></div>
+          {/* Circular background glow */}
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="w-[380px] h-[380px] bg-gradient-to-tr from-[#febf00]/40 to-[#ff513a]/30 rounded-full blur-3xl"></div>
+          </div>
+
           <img
             src={heroImg}
-            alt="Import Export Illustration"
-            className="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-xl object-cover"
+            alt="Global trade illustration"
+            className="relative rounded-3xl shadow-2xl border-4 border-white w-full max-w-md lg:max-w-xl object-cover"
           />
         </motion.div>
       </div>
+
+      {/* Decorative bottom wave */}
+      <svg
+        className="absolute bottom-0 left-0 w-full"
+        viewBox="0 0 1440 320"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#febf00"
+          fillOpacity="0.2"
+          d="M0,160L48,170.7C96,181,192,203,288,218.7C384,235,480,245,576,224C672,203,768,149,864,154.7C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192V320H0Z"
+        ></path>
+      </svg>
     </section>
   );
 };
