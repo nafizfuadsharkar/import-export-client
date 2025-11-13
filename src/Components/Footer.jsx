@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"; // Add your logo here
-import { Mail, Twitter, Youtube, Facebook } from "lucide-react";
+import { Mail, X, Youtube, Facebook } from "lucide-react";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -28,7 +27,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-4 mt-2">
             <a href="#" className="hover:text-[#febf00] transition-all">
-              <Twitter className="w-6 h-6" />
+              <X className="w-6 h-6" />
             </a>
             <a href="#" className="hover:text-[#599a26] transition-all">
               <Youtube className="w-6 h-6" />
