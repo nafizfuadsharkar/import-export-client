@@ -222,131 +222,86 @@
 
 <hr>
 
-<h2>12. Error Handling & Validation</h2>
-<p>The system includes several validation and error-handling mechanisms to ensure smooth user experience.</p>
+<hr>
+
+<h2>12. Technology Stack</h2>
+<p>The IMEX – Import & Export Management Application is built using the following technologies:</p>
+
 <ul>
-  <li><strong>Form Validation:</strong>
-    <ul>
-      <li>All required fields must be filled before submission</li>
-      <li>Invalid or incomplete inputs show toast warnings</li>
-      <li>Password rules strictly enforced during registration</li>
-    </ul>
+  <li><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, DaisyUI, React.js, React Router, Axios, AOS, Framer Motion, Swiper Slider, React Icons, React Toastify</li>
+  <li><strong>Backend:</strong> Node.js, Express.js, MongoDB (Atlas)</li>
+</ul>
+
+<hr>
+
+<h2>13. Dependencies</h2>
+<p>The frontend project uses the following dependencies:</p>
+
+<h3>Production Dependencies</h3>
+<pre>
+"dependencies": {
+  "@tailwindcss/vite": "^4.1.16",
+  "aos": "^2.3.4",
+  "axios": "^1.12.2",
+  "firebase": "^12.4.0",
+  "framer-motion": "^12.23.24",
+  "lucide-react": "^0.548.0",
+  "react": "^19.1.1",
+  "react-dom": "^19.1.1",
+  "react-icons": "^5.5.0",
+  "react-router": "^7.9.4",
+  "react-router-dom": "^7.9.4",
+  "react-toastify": "^11.0.5",
+  "sweetalert2": "^11.26.3",
+  "swiper": "^12.0.3",
+  "tailwindcss": "^4.1.16"
+}
+</pre>
+
+<h3>Development Dependencies</h3>
+<pre>
+"devDependencies": {
+  "@eslint/js": "^9.36.0",
+  "@types/react": "^19.1.16",
+  "@types/react-dom": "^19.1.9",
+  "@vitejs/plugin-react": "^5.0.4",
+  "daisyui": "^5.3.9",
+  "eslint": "^9.36.0",
+  "eslint-plugin-react-hooks": "^5.2.0",
+  "eslint-plugin-react-refresh": "^0.4.22",
+  "globals": "^16.4.0",
+  "vite": "^7.1.7"
+}
+</pre>
+
+<hr>
+
+<h2>14. Installation Instructions</h2>
+<p>Follow these steps to run the frontend project on a local machine:</p>
+
+<ol>
+  <li><strong>Clone the repository:</strong>
+    <pre>git clone https://github.com/nafizfuadsharkar/import-export-client.git</pre>
   </li>
-  <li><strong>Import Quantity Errors:</strong>
-    <ul>
-      <li>User cannot import more than the available stock</li>
-      <li>Import button remains disabled if quantity exceeds limit</li>
-    </ul>
+  <li><strong>Navigate to the project folder:</strong>
+    <pre>cd import-export-client</pre>
   </li>
-  <li><strong>Authentication Errors:</strong>
-    <ul>
-      <li>Wrong email/password shows an error toast</li>
-      <li>Unauthorized users cannot access private routes</li>
-    </ul>
+  <li><strong>Install dependencies:</strong>
+    <pre>npm install</pre>
+    <p>This will install all production and development dependencies listed above.</p>
   </li>
-</ul>
-
-<hr>
-
-<h2>13. Database Structure Overview</h2>
-<p>The application uses a structured database to store all user and product information.</p>
-<ul>
-  <li><strong>Users Collection:</strong>
-    <ul>
-      <li>User Name</li>
-      <li>Email</li>
-      <li>Photo URL</li>
-      <li>Authentication Provider (Email/Google)</li>
-    </ul>
+  <li><strong>Start the development server:</strong>
+    <pre>npm run dev</pre>
+    <p>The project will be available at <code>http://localhost:5173/</code>.</p>
   </li>
-  <li><strong>Products Collection:</strong>
-    <ul>
-      <li>Product Name</li>
-      <li>Image URL</li>
-      <li>Price</li>
-      <li>Origin Country</li>
-      <li>Rating</li>
-      <li>Available Quantity</li>
-      <li>Created By (User Email)</li>
-    </ul>
-  </li>
-  <li><strong>Imports Collection:</strong>
-    <ul>
-      <li>User Email</li>
-      <li>Product ID</li>
-      <li>Imported Quantity</li>
-      <li>Date of Import</li>
-    </ul>
-  </li>
-</ul>
+</ol>
 
 <hr>
 
-<h2>14. Security Features</h2>
-<p>IMEX ensures safe and protected user interactions through several built-in security features.</p>
+<h2>15. Live Website</h2>
+<p>You can access the deployed live frontend of IMEX here:</p>
 <ul>
-  <li>Firebase Authentication for secure login</li>
-  <li>Private routes protect sensitive user data</li>
-  <li>Import/Export operations restricted to authenticated users</li>
-  <li>User-specific data separation</li>
+  <li><a href="https://imex-port-nafiz.netlify.app/" target="_blank">https://imex-port-nafiz.netlify.app/</a></li>
 </ul>
 
-<hr>
-
-<h2>15. Performance Optimizations</h2>
-<p>The application is optimized for speed and smooth operation.</p>
-<ul>
-  <li>Lazy loading used for images</li>
-  <li>Efficient API structure reduces repeated database calls</li>
-  <li>State updates ensure fast UI refresh</li>
-  <li>Responsive design for all devices</li>
-</ul>
-
-<hr>
-
-<h2>16. Browser Compatibility</h2>
-<p>IMEX is compatible with all modern browsers:</p>
-<ul>
-  <li>Google Chrome</li>
-  <li>Mozilla Firefox</li>
-  <li>Microsoft Edge</li>
-  <li>Safari</li>
-</ul>
-
-<hr>
-
-<h2>17. Troubleshooting</h2>
-<p>Common problems and their solutions:</p>
-<ul>
-  <li><strong>Cannot Login:</strong> Check email or password</li>
-  <li><strong>Product Not Showing:</strong> Reload page or check database connection</li>
-  <li><strong>Import Not Working:</strong> Ensure quantity does not exceed stock</li>
-  <li><strong>Image Not Loading:</strong> Verify image URL</li>
-</ul>
-
-<hr>
-
-<h2>18. Future Improvements</h2>
-<p>Possible enhancements for future versions:</p>
-<ul>
-  <li>Advanced admin panel</li>
-  <li>Order tracking system</li>
-  <li>Notifications via email</li>
-  <li>Advanced analytics dashboard</li>
-</ul>
-
-<hr>
-
-<h2>19. Support</h2>
-<p>If you face any issues or need help:</p>
-<ul>
-  <li>Email Support: sharkarnafiz@gmail.com</li>
-</ul>
-
-<hr>
-
-<h2>20. Conclusion</h2>
-<p>IMEX is a complete solution for managing import and export operations efficiently. Its user-friendly interface, secure authentication system, and powerful features make it a reliable platform for both new and experienced users.</p>
-
-</div>
 
